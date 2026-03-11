@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Arsh Clinic</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--clr-navy);
+        }
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.5rem;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color var(--transition-fast);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--clr-teal);
+            box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-tooth logo-icon"></i>
+                <span>Arsh Clinic</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="dental.html">Dental Care</a>
+                <a href="cosmetic.html">Cosmetic & Skin</a>
+                <a href="gallery.html">Before & After</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <a href="tel:08460472995" class="btn btn-primary"><i class="fa-solid fa-phone"></i> 08460472995</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="mobile-menu-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="dental.html">Dental Care</a>
+            <a href="cosmetic.html">Cosmetic & Skin</a>
+            <a href="gallery.html">Before & After</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="text-teal">Contact</a>
+            <a href="tel:08460472995" class="text-teal"><i class="fa-solid fa-phone"></i> Call 08460472995</a>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/918460472995" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Contact Header -->
+    <header class="section bg-white text-center fade-up" style="padding-bottom: 2rem;">
+        <div class="container">
+            <h1 class="heading-secondary" style="color: var(--clr-navy);">Get in Touch</h1>
+            <p class="text-lead" style="max-width: 600px; margin: 0 auto;">Ready to reveal your best self? Schedule an appointment with Dr. Aradhna Das today. We look forward to welcoming you.</p>
+        </div>
+    </header>
+
+    <!-- Form and Map Section -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container grid grid-cols-2 gap-8 fade-up">
+            
+            <!-- Contact Form -->
+            <div class="bg-white rounded-xl shadow-lg p-8" style="padding: 3rem; border-top: 4px solid var(--clr-teal);">
+                <h3 class="heading-tertiary" style="margin-bottom: 2rem;">Request an Appointment</h3>
+                <form id="booking-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Request submitted successfully! We will call you shortly to confirm your slot.');">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div>
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="08460472995" required>
+                        </div>
+                        <div>
+                            <label for="date" class="form-label">Preferred Date</label>
+                            <input type="date" id="date" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service" class="form-label">Service Requested</label>
+                        <select id="service" class="form-control" required>
+                            <option value="">-- Select a Treatment --</option>
+                            <optgroup label="Dental">
+                                <option value="rct">Root Canal</option>
+                                <option value="implant">Dental Implant</option>
+                                <option value="checkup">General Checkup</option>
+                            </optgroup>
+                            <optgroup label="Cosmetic & Laser">
+                                <option value="laser">Laser Hair Removal</option>
+                                <option value="tattoo">Tattoo Removal</option>
+                                <option value="aesthetics">Lip/Brow/Facial Aesthetic</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.125rem;">Submit Request</button>
+                </form>
+            </div>
+
+            <!-- Map and Info -->
+            <div>
+                <div class="bg-navy rounded-xl shadow-lg" style="padding: 2rem; margin-bottom: 2rem; color: white;">
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: var(--clr-teal-light);">Clinic Information</h3>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex gap-4 items-start">
+                            <i class="fa-solid fa-location-dot text-teal" style="font-size: 1.25rem;"></i>
+                            <p><strong>Arsh Family Dental Care & Cosmetic Centre</strong><br>Opposite Yamaha Showroom,<br>Mangarpara Road, Bilaspur, Chhattisgarh</p>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <i class="fa-solid fa-phone text-teal" style="font-size: 1.25rem;"></i>
+                            <p>08460472995</p>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <i class="fa-solid fa-clock text-teal" style="font-size: 1.25rem;"></i>
+                            <p><strong>Mon - Sat:</strong> 10:00 AM - 8:00 PM<br><strong>Sunday:</strong> By Appointment Only</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-xl shadow-lg overflow-hidden" style="height: 300px;">
+                    <!-- Embedded Google Map -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14781.930472433!2d82.1310!3d22.0797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a280b1e1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2sBilaspur%2C%20Chhattisgarh!5e0!3m2!1sen!2sin!4v1611111111111!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2024 Arsh Family Dental Care & Cosmetic Centre.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsh Family Dental Care & Cosmetic Centre | Bilaspur</title>
+    <meta name="description" content="Advanced Dental and Cosmetic Care in Bilaspur by Dr. Aradhna Das. 13+ years of excellence in pain-free treatments, laser hair removal, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --clr-white:#fff;--clr-white-dim:#f8fafc;--clr-teal:#14b8a6;--clr-teal-light:#ccfbf1;
+            --clr-teal-dark:#0f766e;--clr-navy:#0f172a;--clr-navy-light:#1e293b;
+            --clr-text-main:#334155;--clr-text-light:#64748b;--font-main:'Inter',sans-serif;
+            --shadow-sm:0 1px 2px 0 rgb(0 0 0/.05);--shadow-md:0 4px 6px -1px rgb(0 0 0/.1),0 2px 4px -2px rgb(0 0 0/.1);
+            --shadow-lg:0 10px 15px -3px rgb(0 0 0/.1),0 4px 6px -4px rgb(0 0 0/.1);
+            --shadow-glow:0 0 15px rgba(20,184,166,.4);--transition-fast:.2s ease-in-out;--transition-normal:.3s ease-in-out;--max-width:1280px;
+        }
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+        html{scroll-behavior:smooth;}
+        body{font-family:var(--font-main);background-color:var(--clr-white-dim);color:var(--clr-text-main);line-height:1.6;overflow-x:hidden;}
+        a{text-decoration:none;color:inherit;}
+        ul{list-style:none;}
+        img{max-width:100%;height:auto;display:block;}
+        h1,h2,h3,h4{color:var(--clr-navy);line-height:1.2;}
+        .heading-primary{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.02em;}
+        .heading-secondary{font-size:clamp(1.75rem,4vw,2.75rem);font-weight:700;margin-bottom:1rem;}
+        .heading-tertiary{font-size:1.5rem;font-weight:600;}
+        .text-lead{font-size:1.125rem;color:var(--clr-text-light);margin-bottom:2rem;}
+        .btn{display:inline-block;padding:.75rem 1.5rem;border-radius:9999px;font-weight:600;text-align:center;cursor:pointer;transition:all var(--transition-fast);border:none;font-family:inherit;font-size:1rem;}
+        .btn-primary{background-color:var(--clr-teal);color:#fff;box-shadow:var(--shadow-md);}
+        .btn-primary:hover{background-color:var(--clr-teal-dark);box-shadow:var(--shadow-glow);transform:translateY(-2px);}
+        .btn-secondary{background-color:#fff;color:var(--clr-teal);border:2px solid var(--clr-teal);}
+        .btn-secondary:hover{background-color:var(--clr-teal-light);}
+        .container{max-width:var(--max-width);margin:0 auto;padding:0 1.5rem;}
+        .section{padding:5rem 0;}
+        .grid{display:grid;gap:2rem;}
+        .grid-cols-2{grid-template-columns:1fr;}
+        @media(min-width:768px){.grid-cols-2{grid-template-columns:repeat(2,1fr);}}
+        .flex{display:flex;}.flex-col{flex-direction:column;}.items-center{align-items:center;}
+        .justify-center{justify-content:center;}.text-center{text-align:center;}
+        .gap-1{gap:.25rem;}.gap-2{gap:.5rem;}.gap-4{gap:1rem;}.gap-8{gap:2rem;}
+        /* Navbar */
+        .navbar{position:sticky;top:0;z-index:50;background-color:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--clr-white-dim);box-shadow:var(--shadow-sm);padding:1rem 0;transition:all var(--transition-normal);}
+        .nav-container{display:flex;justify-content:space-between;align-items:center;}
+        .logo{font-size:1.5rem;font-weight:800;color:var(--clr-navy);display:flex;align-items:center;gap:.5rem;}
+        .logo-icon{color:var(--clr-teal);}
+        .nav-links{display:none;gap:2rem;}
+        .nav-links a{font-weight:500;color:var(--clr-text-main);transition:color var(--transition-fast);}
+        .nav-links a:hover,.nav-links a.active{color:var(--clr-teal);}
+        .nav-cta{display:none;}
+        .mobile-menu-btn{display:block;background:none;border:none;font-size:1.5rem;color:var(--clr-navy);cursor:pointer;}
+        @media(min-width:768px){.nav-links{display:flex;}.nav-cta{display:block;}.mobile-menu-btn{display:none;}}
+        .mobile-menu{position:fixed;top:0;right:-100%;width:80%;max-width:300px;height:100vh;background:#fff;box-shadow:var(--shadow-lg);z-index:100;padding:2rem;transition:right var(--transition-normal) ease-in-out;display:flex;flex-direction:column;gap:2rem;}
+        .mobile-menu.active{right:0;}
+        .mobile-menu-close{align-self:flex-end;background:none;border:none;font-size:1.5rem;cursor:pointer;}
+        .mobile-nav-links{display:flex;flex-direction:column;gap:1.5rem;}
+        .mobile-nav-links a{font-size:1.25rem;font-weight:600;color:var(--clr-navy);}
+        .whatsapp-float{position:fixed;bottom:2rem;right:2rem;width:60px;height:60px;background:#25d366;color:#fff;border-radius:50px;text-align:center;font-size:30px;box-shadow:2px 2px 3px #999;z-index:100;display:flex;align-items:center;justify-content:center;transition:transform var(--transition-fast);}
+        .whatsapp-float:hover{transform:scale(1.1);}
+        /* Page sections */
+        .bg-navy{background-color:var(--clr-navy);color:#fff;}
+        .bg-white{background-color:#fff;}
+        .text-teal{color:var(--clr-teal);}
+        .rounded-xl{border-radius:1rem;}
+        .shadow-md{box-shadow:var(--shadow-md);}
+        .shadow-lg{box-shadow:var(--shadow-lg);}
+        /* Page nav tabs */
+        .page-tabs{display:flex;background:var(--clr-navy);position:sticky;top:57px;z-index:40;overflow-x:auto;border-bottom:2px solid var(--clr-navy-light);}
+        .page-tab{padding:.75rem 1.5rem;color:var(--clr-text-light);font-weight:600;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;transition:all .2s;}
+        .page-tab:hover,.page-tab.active{color:var(--clr-teal);border-bottom-color:var(--clr-teal);}
+        /* Page sections */
+        .page-section{display:none;}.page-section.active{display:block;}
+        /* Footer */
+        .footer{background-color:var(--clr-navy);color:var(--clr-white-dim);padding:4rem 0 2rem;}
+        .footer-grid{display:grid;grid-template-columns:1fr;gap:3rem;margin-bottom:3rem;}
+        @media(min-width:768px){.footer-grid{grid-template-columns:repeat(3,1fr);}}
+        .footer h3{color:#fff;margin-bottom:1.5rem;}
+        .footer-links{display:flex;flex-direction:column;gap:.75rem;}
+        .footer-links a:hover{color:var(--clr-teal);}
+        .footer-contact{display:flex;flex-direction:column;gap:1rem;}
+        .contact-item{display:flex;align-items:flex-start;gap:.75rem;}
+        .contact-icon{color:var(--clr-teal);font-size:1.25rem;}
+        .footer-bottom{text-align:center;padding-top:2rem;border-top:1px solid var(--clr-navy-light);color:var(--clr-text-light);font-size:.875rem;}
+        /* Animations */
+        .fade-up{opacity:0;transform:translateY(30px);transition:opacity .8s ease-out,transform .8s ease-out;}
+        .fade-up.visible{opacity:1;transform:translateY(0);}
+        /* Form */
+        .form-group{margin-bottom:1.5rem;}
+        .form-label{display:block;margin-bottom:.5rem;font-weight:500;color:var(--clr-navy);}
+        .form-control{width:100%;padding:.75rem 1rem;border:1px solid #cbd5e1;border-radius:.5rem;font-family:inherit;font-size:1rem;transition:border-color var(--transition-fast);}
+        .form-control:focus{outline:none;border-color:var(--clr-teal);box-shadow:0 0 0 3px rgba(20,184,166,.2);}
+        /* Testimonial */
+        .testimonial-slide{display:none;}.testimonial-slide:first-child{display:block;}
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo" onclick="showPage('home')">
+                <i class="fa-solid fa-tooth logo-icon"></i>
+                <span>Arsh Clinic</span>
+            </a>
+            <div class="nav-links">
+                <a href="#" onclick="showPage('home')" id="nav-home" class="active">Home</a>
+                <a href="#" onclick="showPage('dental')" id="nav-dental">Dental Care</a>
+                <a href="#" onclick="showPage('cosmetic')" id="nav-cosmetic">Cosmetic &amp; Skin</a>
+                <a href="#" onclick="showPage('gallery')" id="nav-gallery">Before &amp; After</a>
+                <a href="#" onclick="showPage('about')" id="nav-about">About Us</a>
+                <a href="#" onclick="showPage('contact')" id="nav-contact">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <a href="tel:08460472995" class="btn btn-primary"><i class="fa-solid fa-phone"></i> 08460472995</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="mobile-menu-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+        <div class="mobile-nav-links">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('dental')">Dental Care</a>
+            <a href="#" onclick="showPage('cosmetic')">Cosmetic &amp; Skin</a>
+            <a href="#" onclick="showPage('gallery')">Before &amp; After</a>
+            <a href="#" onclick="showPage('about')">About Us</a>
+            <a href="#" onclick="showPage('contact')">Contact</a>
+            <a href="tel:08460472995" class="text-teal"><i class="fa-solid fa-phone"></i> Call 08460472995</a>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/918460472995" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== HOME PAGE ===== -->
+    <div id="page-home" class="page-section active">
+        <header class="section bg-white" style="padding-top:2rem;">
+            <div class="container grid grid-cols-2 items-center fade-up gap-8">
+                <div>
+                    <h1 class="heading-primary" style="margin-bottom:1.5rem;">Advanced Dental &amp; Cosmetic Care in Bilaspur</h1>
+                    <p class="text-lead">13+ Years of Excellence. Experience pain-free treatments and state-of-the-art laser technology with Dr. Aradhna Das.</p>
+                    <div class="flex gap-4" style="flex-wrap:wrap;">
+                        <a href="#" onclick="showPage('contact')" class="btn btn-primary">Book Consultation</a>
+                        <a href="https://wa.me/918460472995" class="btn btn-secondary" target="_blank"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+                    </div>
+                </div>
+                <div style="position:relative;">
+                    <div style="position:absolute;top:-5%;right:-5%;width:100%;height:100%;background:var(--clr-teal-light);border-radius:2rem;z-index:-1;"></div>
+                    <img src="images/hero_board.png" alt="Arsh Family Dental and Cosmetology Care Clinic Board" style="width:100%;height:auto;object-fit:contain;border:4px solid white;border-radius:1rem;background:white;">
+                </div>
+            </div>
+        </header>
+
+        <section class="bg-navy" style="padding:3rem 0;">
+            <div class="container grid gap-8 text-center fade-up" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));">
+                <div class="flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-star text-teal" style="font-size:2.5rem;"></i>
+                    <h3 style="color:#fff;font-size:1.5rem;margin-top:1rem;">4.7/5 Stars</h3>
+                    <p style="color:var(--clr-teal-light);">200+ Satisfied Patients</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-teal" style="font-size:2.5rem;"></i>
+                    <h3 style="color:#fff;font-size:1.5rem;margin-top:1rem;">13+ Years</h3>
+                    <p style="color:var(--clr-teal-light);">Trusted Expertise</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-face-smile text-teal" style="font-size:2.5rem;"></i>
+                    <h3 style="color:#fff;font-size:1.5rem;margin-top:1rem;">Pain-Free</h3>
+                    <p style="color:var(--clr-teal-light);">Comfort-First Approach</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-microscope text-teal" style="font-size:2.5rem;"></i>
+                    <h3 style="color:#fff;font-size:1.5rem;margin-top:1rem;">Advanced Tech</h3>
+                    <p style="color:var(--clr-teal-light);">Modern Laser Equipment</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container fade-up">
+                <div class="text-center" style="margin-bottom:4rem;">
+                    <h2 class="heading-secondary">Comprehensive Care Under One Roof</h2>
+                    <p class="text-lead" style="max-width:600px;margin:0 auto;">From essential dental health to advanced aesthetic enhancements.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl shadow-md" style="padding:3rem;border-top:4px solid var(--clr-teal);">
+                        <div style="width:60px;height:60px;background:var(--clr-teal-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
+                            <i class="fa-solid fa-tooth text-teal" style="font-size:1.75rem;"></i>
+                        </div>
+                        <h3 class="heading-tertiary" style="margin-bottom:1rem;">Dental Excellence</h3>
+                        <ul style="color:var(--clr-text-main);" class="flex flex-col gap-2">
+                            <li><i class="fa-solid fa-check text-teal" style="margin-right:.5rem;"></i>Painless Root Canals (RCT)</li>
+                            <li><i class="fa-solid fa-check text-teal" style="margin-right:.5rem;"></i>Surgical &amp; Safe Extractions</li>
+                            <li><i class="fa-solid fa-check text-teal" style="margin-right:.5rem;"></i>General &amp; Preventative Dentistry</li>
+                            <li><i class="fa-solid fa-check text-teal" style="margin-right:.5rem;"></i>Dental Implants &amp; Braces</li>
+                        </ul>
+                        <br>
+                        <a href="#" onclick="showPage('dental')" class="btn btn-primary">Explore Dental Services</a>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md" style="padding:3rem;border-top:4px solid var(--clr-navy);">
+                        <div style="width:60px;height:60px;background:var(--clr-white-dim);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;border:1px solid var(--clr-navy-light);">
+                            <i class="fa-solid fa-wand-magic-sparkles" style="font-size:1.75rem;color:var(--clr-navy);"></i>
+                        </div>
+                        <h3 class="heading-tertiary" style="margin-bottom:1rem;">Aesthetic &amp; Laser Clinic</h3>
+                        <ul style="color:var(--clr-text-main);" class="flex flex-col gap-2">
+                            <li><i class="fa-solid fa-check" style="margin-right:.5rem;color:var(--clr-navy);"></i>Laser Hair Removal</li>
+                            <li><i class="fa-solid fa-check" style="margin-right:.5rem;color:var(--clr-navy);"></i>Laser Tattoo Removal</li>
+                            <li><i class="fa-solid fa-check" style="margin-right:.5rem;color:var(--clr-navy);"></i>Permanent Makeup (Brows/Lips)</li>
+                            <li><i class="fa-solid fa-check" style="margin-right:.5rem;color:var(--clr-navy);"></i>Hair Transplants &amp; Restoration</li>
+                        </ul>
+                        <br>
+                        <a href="#" onclick="showPage('cosmetic')" class="btn btn-primary" style="background:var(--clr-navy);">Explore Cosmetic Services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background-color:var(--clr-teal-light);padding:5rem 0;">
+            <div class="container fade-up text-center">
+                <h2 class="heading-secondary">What Our Patients Say</h2>
+                <div style="max-width:800px;margin:3rem auto;background:#fff;padding:3rem;border-radius:1rem;box-shadow:var(--shadow-md);position:relative;min-height:220px;">
+                    <i class="fa-solid fa-quote-left" style="font-size:3rem;color:var(--clr-teal-light);position:absolute;top:1rem;left:1.5rem;opacity:.5;"></i>
+                    <div class="testimonial-slide">
+                        <div class="flex justify-center gap-1 text-teal" style="margin-bottom:1rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p style="font-size:1.1rem;font-style:italic;margin-bottom:1.5rem;color:var(--clr-navy);">"Dr. Aradhna Das is fantastic! The root canal was completely pain-free. The clinic is so modern and hygienic. Highly recommended for anyone in Bilaspur."</p>
+                        <h4 style="font-weight:700;color:var(--clr-teal);">— Rahul S.</h4>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="flex justify-center gap-1 text-teal" style="margin-bottom:1rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p style="font-size:1.1rem;font-style:italic;margin-bottom:1.5rem;color:var(--clr-navy);">"I've been visiting Arsh Clinic for laser hair removal sessions. The staff are so comforting and the technology is top-notch. Saw results from the very first session!"</p>
+                        <h4 style="font-weight:700;color:var(--clr-teal);">— Priya M.</h4>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="flex justify-center gap-1 text-teal" style="margin-bottom:1rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p style="font-size:1.1rem;font-style:italic;margin-bottom:1.5rem;color:var(--clr-navy);">"I got permanent lip tinting done here and I am amazed at the natural results. It's the best cosmetic clinic I've ever been to."</p>
+                        <h4 style="font-weight:700;color:var(--clr-teal);">— Sneha V.</h4>
+                    </div>
+                </div>
+                <a href="#" onclick="showPage('contact')" class="btn btn-primary">Book Your Appointment</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== DENTAL PAGE ===== -->
+    <div id="page-dental" class="page-section">
+        <header class="section bg-white text-center fade-up" style="padding-bottom:2rem;">
+            <div class="container">
+                <h1 class="heading-secondary" style="color:var(--clr-navy);">Expert Dental Care in Bilaspur</h1>
+                <p class="text-lead" style="max-width:700px;margin:0 auto;">Dr. Aradhna Das brings over 13 years of dental expertise, offering pain-free, high-quality treatments for the whole family using the latest technology.</p>
+            </div>
+        </header>
+        <section class="section" style="padding-top:0;">
+            <div class="container grid grid-cols-2 gap-8 fade-up">
+                <div class="bg-white rounded-xl shadow-md" style="padding:2.5rem;border-top:4px solid var(--clr-teal);" id="rct">
+                    <i class="fa-solid fa-tooth text-teal" style="font-size:2.5rem;margin-bottom:1rem;"></i>
+                    <h3 class="heading-tertiary" style="margin-bottom:.75rem;">Painless Root Canal (RCT)</h3>
+                    <p style="color:var(--clr-text-main);">Using advanced rotary endodontic systems and effective anaesthesia, we make root canal treatment completely comfortable. Most procedures are completed in a single visit.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md" style="padding:2.5rem;border-top:4px solid var(--clr-teal);" id="implants">
+                    <i class="fa-solid fa-kit-medical text-teal" style="font-size:2.5rem;margin-bottom:1rem;"></i>
+                    <h3 class="heading-tertiary" style="margin-bottom:.75rem;">Dental Implants</h3>
+                    <p style="color:var(--clr-text-main);">Replace missing teeth permanently with titanium implants that look, feel, and function exactly like natural teeth. Life-changing results with high success rates.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md" style="padding:2.5rem;border-top:4px solid var(--clr-teal);">
+                    <i class="fa-solid fa-smile text-teal" style="font-size:2.5rem;margin-bottom:1rem;"></i>
+                    <h3 class="heading-tertiary" style="margin-bottom:.75rem;">Braces &amp; Aligners</h3>
+                    <p style="color:var(--clr-text-main);">Correcting misaligned teeth with modern metal, ceramic, or invisible aligner systems tailored to your lifestyle and budget.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md" style="padding:2.5rem;border-top:4px solid var(--clr-teal);">
+                    <i class="fa-solid fa-shield-halved text-teal" style="font-size:2.5rem;margin-bottom:1rem;"></i>
+                    <h3 class="heading-tertiary" style="margin-bottom:.75rem;">General Dentistry</h3>
+                    <p style="color:var(--clr-text-main);">Comprehensive checkups, cleanings, fillings, and extractions for the whole family. We focus on prevention to keep your smile healthy for life.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section bg-navy text-center fade-up" style="padding:4rem 0;">
+            <div class="container">
+                <h2 class="heading-secondary" style="color:#fff;">Ready for a Healthier Smile?</h2>
+                <p style="color:var(--clr-teal-light);margin-bottom:2rem;font-size:1.1rem;">Book your appointment today and experience truly pain-free dentistry.</p>
+                <a href="#" onclick="showPage('contact')" class="btn btn-primary" style="font-size:1.1rem;padding:1rem 2rem;">Book an Appointment</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== COSMETIC PAGE ===== -->
+    <div id="page-cosmetic" class="page-section">
+        <header class="section bg-white text-center fade-up" style="padding-bottom:2rem;">
+            <div class="container">
+                <h1 class="heading-secondary" style="color:var(--clr-navy);">Reveal Your Best Self with Advanced Cosmetic &amp; Laser Care</h1>
+                <p class="text-lead" style="max-width:800px;margin:0 auto;">Under the expert guidance of Dr. Aradhna Das, we offer premium aesthetic and laser treatments designed to enhance your natural features using state-of-the-art technology.</p>
+            </div>
+        </header>
+        <section class="section" style="padding-top:0;">
+            <div class="container grid grid-cols-2 gap-8 fade-up">
+                <div class="bg-white rounded-xl shadow-md" style="overflow:hidden;border-top:4px solid var(--clr-navy);" id="laser-hair">
+                    <img src="images/laser_hair.png" alt="Laser Hair Removal" style="width:100%;height:180px;object-fit:cover;">
+                    <div style="padding:1.5rem;">
+                    <h3 class="heading-tertiary" style="margin-bottom:.5rem;">Laser Hair Removal</h3>
+                    <p style="color:var(--clr-teal);font-weight:500;margin-bottom:.75rem;">Silky, Smooth Skin—Permanently.</p>
+                    <p style="color:var(--clr-text-main);">Safe for all skin types. Quick sessions with no downtime. Precision targeting that leaves surrounding skin undamaged.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md" style="overflow:hidden;border-top:4px solid var(--clr-navy);" id="tattoo">
+                    <img src="images/tattoo_removal.png" alt="Laser Tattoo Removal" style="width:100%;height:180px;object-fit:cover;">
+                    <div style="padding:1.5rem;">
+                    <h3 class="heading-tertiary" style="margin-bottom:.5rem;">Laser Tattoo Removal</h3>
+                    <p style="color:var(--clr-teal);font-weight:500;margin-bottom:.75rem;">Clear, Flawless Skin.</p>
+                    <p style="color:var(--clr-text-main);">Advanced laser technology safely breaks down tattoo ink. Gradual fading with minimal discomfort across all ink colors and skin types.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md" style="padding:2.5rem;border-top:4px solid var(--clr-navy);">
+                    <i class="fa-solid fa-face-grin-stars" style="font-size:2.5rem;margin-bottom:1rem;color:var(--clr-navy);"></i>
+                    <h3 class="heading-tertiary" style="margin-bottom:.5rem;">Lip Augmentation</h3>
+                    <p style="color:var(--clr-teal);font-weight:500;margin-bottom:.75rem;">Perfectly Plump, Natural-Looking Lips.</p>
+                    <p style="color:var(--clr-text-main);">Premium safe injectables with artistic touch. Immediate, visible results. Minimally invasive with quick recovery. Customized to your desired shape.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md" style="overflow:hidden;border-top:4px solid var(--clr-navy);">
+                    <img src="images/brow_lift.png" alt="Brow Lift and Facial Rejuvenation" style="width:100%;height:180px;object-fit:cover;">
+                    <div style="padding:1.5rem;">
+                    <h3 class="heading-tertiary" style="margin-bottom:.5rem;">Brow Lift &amp; Facial Rejuvenation</h3>
+                    <p style="color:var(--clr-teal);font-weight:500;margin-bottom:.75rem;">Awaken Your Appearance.</p>
+                    <p style="color:var(--clr-text-main);">Subtly elevate the brow line, smooth forehead wrinkles, and open up the eye area for a refreshed, youthful look without surgery.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md" style="overflow:hidden;border-top:4px solid var(--clr-navy);">
+                    <img src="images/hair_restoration.png" alt="Hair Restoration" style="width:100%;height:180px;object-fit:cover;">
+                    <div style="padding:1.5rem;">
+                    <h3 class="heading-tertiary" style="margin-bottom:.5rem;">Hair Restoration &amp; Treatment</h3>
+                    <p style="color:var(--clr-teal);font-weight:500;margin-bottom:.75rem;">Reclaim Your Hair, Reclaim Your Confidence.</p>
+                    <p style="color:var(--clr-text-main);">Comprehensive scalp treatments to stimulate growth, strengthen follicles, and restore natural density for both men and women.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md" style="overflow:hidden;border-top:4px solid var(--clr-navy);">
+                    <img src="images/nose_shaping.png" alt="Non-Surgical Nose Shaping" style="width:100%;height:180px;object-fit:cover;">
+                    <div style="padding:1.5rem;">
+                    <h3 class="heading-tertiary" style="margin-bottom:.5rem;">Non-Surgical Nose Shaping</h3>
+                    <p style="color:var(--clr-teal);font-weight:500;margin-bottom:.75rem;">Refine Your Profile Without Surgery.</p>
+                    <p style="color:var(--clr-text-main);">Precise dermal fillers reshape and contour your nose in one short visit. Instant results with zero surgical downtime. Safe and reversible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section bg-navy text-center fade-up" style="padding:4rem 0;">
+            <div class="container">
+                <h2 class="heading-secondary" style="color:#fff;">Not sure which treatment is right for you?</h2>
+                <p style="color:var(--clr-teal-light);margin-bottom:2rem;font-size:1.1rem;">Schedule a consultation with Dr. Aradhna Das to create your personalized treatment plan.</p>
+                <a href="#" onclick="showPage('contact')" class="btn btn-primary" style="font-size:1.1rem;padding:1rem 2rem;">Book Your Cosmetic Consultation</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== GALLERY PAGE ===== -->
+    <div id="page-gallery" class="page-section">
+        <header class="section bg-white text-center fade-up" style="padding-bottom:2rem;">
+            <div class="container">
+                <h1 class="heading-secondary" style="color:var(--clr-navy);">Before &amp; After Transformations</h1>
+                <p class="text-lead" style="max-width:600px;margin:0 auto;">Real results from real patients at Arsh Clinic. See the difference that expert care makes.</p>
+            </div>
+        </header>
+        <section class="section" style="padding-top:1rem;">
+            <div class="container fade-up">
+                <div class="grid gap-8" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
+                    <div class="bg-white rounded-xl shadow-md" style="overflow:hidden;">
+                        <img src="images/lips_before_after.png" alt="Before and After" style="width:100%;height:200px;object-fit:cover;">
+                        <div style="padding:1.5rem;">
+                            <h3 class="heading-tertiary" style="margin-bottom:.5rem;">Lips Transformation</h3>
+                            <p style="color:var(--clr-text-light);">Natural, beautiful lip enhancement results</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md" style="overflow:hidden;">
+                        <div style="background:linear-gradient(135deg,var(--clr-teal-light),var(--clr-teal-dark));height:200px;display:flex;align-items:center;justify-content:center;">
+                            <i class="fa-solid fa-wand-magic-sparkles" style="font-size:5rem;color:#fff;"></i>
+                        </div>
+                        <div style="padding:1.5rem;">
+                            <h3 class="heading-tertiary" style="margin-bottom:.5rem;">Laser Hair Removal</h3>
+                            <p style="color:var(--clr-text-light);">Smooth, hair-free skin achieved after sessions</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md" style="overflow:hidden;">
+                        <div style="background:linear-gradient(135deg,#e0f2fe,#0ea5e9);height:200px;display:flex;align-items:center;justify-content:center;">
+                            <i class="fa-solid fa-face-grin-stars" style="font-size:5rem;color:#fff;"></i>
+                        </div>
+                        <div style="padding:1.5rem;">
+                            <h3 class="heading-tertiary" style="margin-bottom:.5rem;">Lip Augmentation</h3>
+                            <p style="color:var(--clr-text-light);">Natural, beautiful lip enhancement results</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md" style="overflow:hidden;">
+                        <div style="background:linear-gradient(135deg,#fef3c7,#f59e0b);height:200px;display:flex;align-items:center;justify-content:center;">
+                            <i class="fa-solid fa-circle-xmark" style="font-size:5rem;color:#fff;"></i>
+                        </div>
+                        <div style="padding:1.5rem;">
+                            <h3 class="heading-tertiary" style="margin-bottom:.5rem;">Tattoo Removal</h3>
+                            <p style="color:var(--clr-text-light);">Gradual, effective fading over multiple sessions</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md" style="overflow:hidden;">
+                        <div style="background:linear-gradient(135deg,#f0fdf4,#16a34a);height:200px;display:flex;align-items:center;justify-content:center;">
+                            <i class="fa-solid fa-person-walking" style="font-size:5rem;color:#fff;"></i>
+                        </div>
+                        <div style="padding:1.5rem;">
+                            <h3 class="heading-tertiary" style="margin-bottom:.5rem;">Hair Restoration</h3>
+                            <p style="color:var(--clr-text-light);">Fuller, denser hair after treatment plan</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md" style="overflow:hidden;">
+                        <div style="background:linear-gradient(135deg,#fdf4ff,#a855f7);height:200px;display:flex;align-items:center;justify-content:center;">
+                            <i class="fa-solid fa-spa" style="font-size:5rem;color:#fff;"></i>
+                        </div>
+                        <div style="padding:1.5rem;">
+                            <h3 class="heading-tertiary" style="margin-bottom:.5rem;">Facial Rejuvenation</h3>
+                            <p style="color:var(--clr-text-light);">Refreshed, youthful appearance with brow lift</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top:3rem;">
+                    <p style="color:var(--clr-text-light);margin-bottom:1.5rem;">Want to achieve similar results? Book a consultation with Dr. Aradhna Das today.</p>
+                    <a href="#" onclick="showPage('contact')" class="btn btn-primary">Book Your Transformation</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== ABOUT PAGE ===== -->
+    <div id="page-about" class="page-section">
+        <section class="section bg-white" style="padding-top:3rem;">
+            <div class="container grid grid-cols-2 items-center gap-8 fade-up">
+                <div>
+                    <h1 class="heading-primary" style="margin-bottom:1rem;color:var(--clr-navy);">Meet Dr. Aradhna Das</h1>
+                    <h2 class="heading-tertiary" style="color:var(--clr-teal);margin-bottom:2rem;">Lead Dental &amp; Aesthetic Specialist</h2>
+                    <p class="text-lead" style="color:var(--clr-text-main);">With over 13 years of distinguished healthcare experience, Dr. Aradhna Das has built the Arsh Family Dental Care &amp; Cosmetic Centre into Bilaspur's premier destination for both essential dentistry and advanced aesthetics.</p>
+                    <p class="text-lead" style="color:var(--clr-text-main);">Her patient-first philosophy ensures that every treatment—whether a complex root canal or precision laser therapy—is delivered with empathy, transparency, and a gentle touch.</p>
+                    <div class="flex gap-4" style="margin-top:2rem;flex-wrap:wrap;">
+                        <div style="padding:1rem 1.5rem;background:var(--clr-teal-light);border-radius:.5rem;">
+                            <span style="font-weight:700;font-size:1.5rem;color:var(--clr-teal-dark);">13+</span>
+                            <p style="font-weight:500;font-size:.875rem;color:var(--clr-navy);">Years Experience</p>
+                        </div>
+                        <div style="padding:1rem 1.5rem;background:var(--clr-teal-light);border-radius:.5rem;">
+                            <span style="font-weight:700;font-size:1.5rem;color:var(--clr-teal-dark);">5k+</span>
+                            <p style="font-weight:500;font-size:.875rem;color:var(--clr-navy);">Happy Smiles</p>
+                        </div>
+                        <div style="padding:1rem 1.5rem;background:var(--clr-teal-light);border-radius:.5rem;">
+                            <span style="font-weight:700;font-size:1.5rem;color:var(--clr-teal-dark);">4.7★</span>
+                            <p style="font-weight:500;font-size:.875rem;color:var(--clr-navy);">Patient Rating</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align:center;background:var(--clr-teal-light);border-radius:2rem;padding:3rem;">
+                    <i class="fa-solid fa-user-doctor" style="font-size:10rem;color:var(--clr-teal);"></i>
+                    <p style="margin-top:1rem;font-weight:700;color:var(--clr-navy);font-size:1.25rem;">Dr. Aradhna Das</p>
+                    <p style="color:var(--clr-teal);">MDS · 13+ Years Experience</p>
+                </div>
+            </div>
+        </section>
+        <section class="section bg-navy" style="padding:4rem 0;">
+            <div class="container grid grid-cols-2 gap-8 fade-up">
+                <div class="bg-white rounded-xl shadow-md" style="padding:3rem;text-align:center;">
+                    <i class="fa-solid fa-spray-can-sparkles text-teal" style="font-size:3rem;margin-bottom:1.5rem;"></i>
+                    <h3 class="heading-tertiary" style="margin-bottom:1rem;color:var(--clr-navy);">Strict Sterilization</h3>
+                    <p style="color:var(--clr-text-main);">Class B Autoclaves, UV chambers, and disposable barriers ensure 100% cross-infection control.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md" style="padding:3rem;text-align:center;">
+                    <i class="fa-solid fa-building text-teal" style="font-size:3rem;margin-bottom:1.5rem;"></i>
+                    <h3 class="heading-tertiary" style="margin-bottom:1rem;color:var(--clr-navy);">Modern Infrastructure</h3>
+                    <p style="color:var(--clr-text-main);">A calming, premium interior equipped with fully digital RVG X-Rays and cutting-edge Laser stations.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== CONTACT PAGE ===== -->
+    <div id="page-contact" class="page-section">
+        <header class="section bg-white text-center fade-up" style="padding-bottom:2rem;">
+            <div class="container">
+                <h1 class="heading-secondary" style="color:var(--clr-navy);">Get in Touch</h1>
+                <p class="text-lead" style="max-width:600px;margin:0 auto;">Ready to reveal your best self? Schedule an appointment with Dr. Aradhna Das today.</p>
+            </div>
+        </header>
+        <section class="section" style="padding-top:0;">
+            <div class="container grid grid-cols-2 gap-8 fade-up">
+                <div class="bg-white rounded-xl shadow-lg" style="padding:3rem;border-top:4px solid var(--clr-teal);">
+                    <h3 class="heading-tertiary" style="margin-bottom:2rem;">Request an Appointment</h3>
+                    <form onsubmit="event.preventDefault();alert('Request submitted! We will call you shortly to confirm your slot.');this.reset();">
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-group" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+                            <div>
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" placeholder="Your Phone" required>
+                            </div>
+                            <div>
+                                <label class="form-label">Preferred Date</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Service Requested</label>
+                            <select class="form-control" required>
+                                <option value="">-- Select a Treatment --</option>
+                                <optgroup label="Dental">
+                                    <option>Root Canal</option>
+                                    <option>Dental Implant</option>
+                                    <option>General Checkup</option>
+                                    <option>Braces / Aligners</option>
+                                </optgroup>
+                                <optgroup label="Cosmetic &amp; Laser">
+                                    <option>Laser Hair Removal</option>
+                                    <option>Tattoo Removal</option>
+                                    <option>Lip / Brow / Facial Aesthetic</option>
+                                    <option>Hair Restoration</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;font-size:1.125rem;">Submit Request</button>
+                    </form>
+                </div>
+                <div>
+                    <div class="bg-navy rounded-xl shadow-lg" style="padding:2rem;margin-bottom:2rem;color:#fff;">
+                        <h3 style="font-size:1.25rem;font-weight:600;margin-bottom:1rem;color:var(--clr-teal-light);">Clinic Information</h3>
+                        <div class="flex flex-col gap-4">
+                            <div class="contact-item">
+                                <i class="fa-solid fa-location-dot text-teal" style="font-size:1.25rem;"></i>
+                                <p><strong>Arsh Family Dental Care &amp; Cosmetic Centre</strong><br>Opposite Yamaha Showroom,<br>Mangarpara Road, Bilaspur, Chhattisgarh</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-phone text-teal" style="font-size:1.25rem;"></i>
+                                <p><a href="tel:08460472995" style="color:#fff;">08460472995</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-brands fa-whatsapp text-teal" style="font-size:1.25rem;"></i>
+                                <p><a href="https://wa.me/918460472995" style="color:var(--clr-teal-light);" target="_blank">Chat on WhatsApp</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-clock text-teal" style="font-size:1.25rem;"></i>
+                                <p><strong>Mon - Sat:</strong> 10:00 AM - 8:00 PM<br><strong>Sunday:</strong> By Appointment Only</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-xl shadow-lg overflow-hidden" style="height:300px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14781.930472433!2d82.1310!3d22.0797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a280b1e1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2sBilaspur%2C%20Chhattisgarh!5e0!3m2!1sen!2sin!4v1611111111111!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" onclick="showPage('home')" class="logo" style="color:#fff;margin-bottom:1rem;">
+                        <i class="fa-solid fa-tooth logo-icon" style="color:#fff;"></i>
+                        <span>Arsh Clinic</span>
+                    </a>
+                    <p style="margin-bottom:1.5rem;color:var(--clr-text-light);">Advanced Dental and Cosmetic Care in Bilaspur led by Dr. Aradhna Das.</p>
+                    <div class="footer-contact">
+                        <div class="contact-item"><i class="fa-solid fa-location-dot contact-icon"></i><span>Opposite Yamaha Showroom, Mangarpara Road, Bilaspur, CG</span></div>
+                        <div class="contact-item"><i class="fa-solid fa-phone contact-icon"></i><span>08460472995</span></div>
+                        <div class="contact-item"><i class="fa-solid fa-clock contact-icon"></i><span>Mon - Sat: 10AM - 8PM | Sun: By Appointment</span></div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#" onclick="showPage('home')">Home</a>
+                        <a href="#" onclick="showPage('dental')">Dental Treatments</a>
+                        <a href="#" onclick="showPage('cosmetic')">Laser &amp; Skin Care</a>
+                        <a href="#" onclick="showPage('gallery')">Transformation Gallery</a>
+                        <a href="#" onclick="showPage('about')">Meet Dr. Aradhna Das</a>
+                    </div>
+                </div>
+                <div>
+                    <h3>Our Specialties</h3>
+                    <div class="footer-links">
+                        <a href="#" onclick="showPage('dental')">Painless Root Canals</a>
+                        <a href="#" onclick="showPage('dental')">Dental Implants</a>
+                        <a href="#" onclick="showPage('cosmetic')">Laser Hair Removal</a>
+                        <a href="#" onclick="showPage('cosmetic')">Laser Tattoo Removal</a>
+                        <a href="#" onclick="showPage('cosmetic')">Facial Rejuvenation</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Arsh Family Dental Care &amp; Cosmetic Centre. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // Page routing
+    function showPage(id) {
+        document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+        const page = document.getElementById('page-' + id);
+        if (page) {
+            page.classList.add('active');
+            // Re-trigger fade animations
+            page.querySelectorAll('.fade-up').forEach(el => {
+                el.classList.remove('visible');
+                setTimeout(() => el.classList.add('visible'), 100);
+            });
+        }
+        const navLink = document.getElementById('nav-' + id);
+        if (navLink) navLink.classList.add('active');
+        window.scrollTo({top: 0, behavior: 'smooth'});
+        // Close mobile menu
+        document.querySelector('.mobile-menu').classList.remove('active');
+        return false;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Mobile menu
+        const btn = document.querySelector('.mobile-menu-btn');
+        const closeBtn = document.querySelector('.mobile-menu-close');
+        const menu = document.querySelector('.mobile-menu');
+        if (btn) btn.addEventListener('click', () => menu.classList.add('active'));
+        if (closeBtn) closeBtn.addEventListener('click', () => menu.classList.remove('active'));
+
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            navbar.style.padding = window.scrollY > 50 ? '0.5rem 0' : '1rem 0';
+        });
+
+        // Initial fade-up for home
+        document.querySelectorAll('#page-home .fade-up').forEach(el => {
+            setTimeout(() => el.classList.add('visible'), 200);
+        });
+
+        // Testimonial slider
+        const slides = document.querySelectorAll('.testimonial-slide');
+        if (slides.length > 1) {
+            let cur = 0;
+            setInterval(() => {
+                slides[cur].style.display = 'none';
+                cur = (cur + 1) % slides.length;
+                slides[cur].style.display = 'block';
+                slides[cur].style.opacity = '0';
+                setTimeout(() => { slides[cur].style.transition = 'opacity 0.5s'; slides[cur].style.opacity = '1'; }, 50);
+            }, 5000);
+        }
+    });
+    </script>
+</body>
+</html>

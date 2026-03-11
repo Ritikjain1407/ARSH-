@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformation Gallery | Arsh Clinic</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .comparison-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        .comparison-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--clr-white-dim);
+        }
+        .placeholder-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background-color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-weight: 600;
+            position: relative;
+        }
+        .placeholder-image::after {
+            content: 'PLACEHOLDER';
+            position: absolute;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            opacity: 0.5;
+        }
+        .split-image-container {
+            display: flex;
+            width: 100%;
+        }
+        .split-half {
+            flex: 1;
+            position: relative;
+        }
+        .split-half.before {
+            border-right: 2px solid white;
+            background-color: #cbd5e1;
+        }
+        .split-half.after {
+            background-color: #94a3b8;
+        }
+        .label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-tooth logo-icon"></i>
+                <span>Arsh Clinic</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="dental.html">Dental Care</a>
+                <a href="cosmetic.html">Cosmetic & Skin</a>
+                <a href="gallery.html" class="active">Before & After</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <a href="tel:08460472995" class="btn btn-primary"><i class="fa-solid fa-phone"></i> 08460472995</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="section bg-white text-center fade-up" style="padding-bottom: 2rem;">
+        <div class="container">
+            <h1 class="heading-secondary" style="color: var(--clr-navy);">Real Results, Real Confidence</h1>
+            <p class="text-lead" style="max-width: 800px; margin: 0 auto;">Browse through our patient transformation gallery. These side-by-side examples demonstrate the highly effective results of our dental restorations and advanced aesthetic laser procedures.</p>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="section">
+        <div class="container fade-up">
+            
+            <h3 class="heading-tertiary" style="margin-bottom: 2rem; color: var(--clr-navy); border-bottom: 2px solid var(--clr-teal); display: inline-block;">Dental Transformations</h3>
+            <div class="comparison-grid" style="margin-bottom: 4rem;">
+                <!-- Dental Example 1 -->
+                <div class="comparison-card">
+                    <div class="split-image-container placeholder-image">
+                        <div class="split-half before"><span class="label">Before (Stained)</span></div>
+                        <div class="split-half after"><span class="label">After (Whitening)</span></div>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <h4 style="font-weight: 700; color: var(--clr-teal); margin-bottom: 0.5rem;">Laser Teeth Whitening</h4>
+                        <p style="font-size: 0.875rem; color: var(--clr-text-main);">Noticeable brightness achieved in a single 45-minute clinic session.</p>
+                    </div>
+                </div>
+
+                <!-- Dental Example 2 -->
+                <div class="comparison-card">
+                    <div class="split-image-container placeholder-image">
+                        <div class="split-half before"><span class="label">Before (Missing Tooth)</span></div>
+                        <div class="split-half after"><span class="label">After (Implant)</span></div>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <h4 style="font-weight: 700; color: var(--clr-teal); margin-bottom: 0.5rem;">Single Dental Implant</h4>
+                        <p style="font-size: 0.875rem; color: var(--clr-text-main);">Seamless integration of a titanium implant and natural-looking ceramic crown.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="heading-tertiary" style="margin-bottom: 2rem; color: var(--clr-navy); border-bottom: 2px solid var(--clr-navy); display: inline-block;">Cosmetic & Skin Clinic Results</h3>
+            <div class="comparison-grid">
+                <!-- Cosmetic Example 1 -->
+                <div class="comparison-card">
+                    <div class="split-image-container placeholder-image">
+                        <div class="split-half before"><span class="label">Before</span></div>
+                        <div class="split-half after"><span class="label">After (4 Sessions)</span></div>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <h4 style="font-weight: 700; color: var(--clr-navy); margin-bottom: 0.5rem;">Laser Tattoo Fading</h4>
+                        <p style="font-size: 0.875rem; color: var(--clr-text-main);">Safe, blister-free fading of dark ink using advanced laser technology.</p>
+                    </div>
+                </div>
+
+                <!-- Cosmetic Example 2 -->
+                <div class="comparison-card">
+                    <img src="images/lips_before_after.jpg" alt="Lip Permanent Color Before and After" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; background-color: #e2e8f0;">
+                    <div style="padding: 1.5rem;">
+                        <h4 style="font-weight: 700; color: var(--clr-navy); margin-bottom: 0.5rem;">Permanent Lip Colour</h4>
+                        <p style="font-size: 0.875rem; color: var(--clr-text-main);">Noticeable enhancement in lip tone and fullness with permanent colour technology.</p>
+                    </div>
+                </div>
+
+                <!-- Cosmetic Example 3 -->
+                <div class="comparison-card">
+                    <div class="split-image-container placeholder-image">
+                        <div class="split-half before"><span class="label">Before</span></div>
+                        <div class="split-half after"><span class="label">After (6 Months)</span></div>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <h4 style="font-weight: 700; color: var(--clr-navy); margin-bottom: 0.5rem;">Hair Restoration</h4>
+                        <p style="font-size: 0.875rem; color: var(--clr-text-main);">Significant increase in density at the crown following targeted medical therapy.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2024 Arsh Family Dental Care & Cosmetic Centre.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
