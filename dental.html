@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Care | Arsh Clinic</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Vector Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .page-header {
+            padding: 4rem 0 2rem;
+            background: var(--clr-teal-light);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Responsive Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-tooth logo-icon"></i>
+                <span>Arsh Clinic</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="dental.html" class="active">Dental Care</a>
+                <a href="cosmetic.html">Cosmetic & Skin</a>
+                <a href="gallery.html">Before & After</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="nav-cta">
+                <a href="tel:08460472995" class="btn btn-primary"><i class="fa-solid fa-phone"></i> 08460472995</a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <button class="mobile-menu-close" aria-label="Close Menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="dental.html">Dental Care</a>
+            <a href="cosmetic.html">Cosmetic & Skin</a>
+            <a href="gallery.html">Before & After</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="tel:08460472995" class="text-teal"><i class="fa-solid fa-phone"></i> Call 08460472995</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <header class="page-header section">
+        <div class="container fade-up">
+            <h1 class="heading-primary" style="margin-bottom: 1rem;">Comprehensive Dental Care</h1>
+            <p class="text-lead" style="max-width: 600px; margin: 0 auto; color: var(--clr-navy);">Advanced techniques, state-of-the-art equipment, and a focus on pain-free procedures.</p>
+        </div>
+    </header>
+
+    <!-- Services Container -->
+    <main class="section" style="padding: 4rem 0;">
+        <div class="container grid grid-cols-2 gap-8 fade-up" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            
+            <!-- Root Canal (RCT) -->
+            <div id="rct" class="bg-white rounded-xl shadow-md" style="padding: 2.5rem; border: 1px solid var(--clr-border);">
+                <div style="width: 50px; height: 50px; background: var(--clr-teal-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                    <i class="fa-solid fa-tooth text-teal" style="font-size: 1.5rem;"></i>
+                </div>
+                <h3 class="heading-tertiary" style="margin-bottom: 1rem;">Painless Root Canal Treatment (RCT)</h3>
+                <p style="color: var(--clr-text-main); margin-bottom: 1rem;">Save your natural tooth with our advanced root canal therapy. We focus on ensuring a comfortable, pain-free experience using modern technology.</p>
+            </div>
+
+            <!-- Prevenative Care -->
+            <div class="bg-white rounded-xl shadow-md" style="padding: 2.5rem; border: 1px solid var(--clr-border);">
+                <div style="width: 50px; height: 50px; background: var(--clr-teal-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                    <i class="fa-solid fa-hands-bubbles text-teal" style="font-size: 1.5rem;"></i>
+                </div>
+                <h3 class="heading-tertiary" style="margin-bottom: 1rem;">Scaling & Polishing</h3>
+                <p style="color: var(--clr-text-main); margin-bottom: 1rem;">Maintain optimal oral hygiene with professional cleaning. Removes plaque, tartar, and surface stains to prevent gum disease and decay.</p>
+            </div>
+
+            <!-- Implants -->
+            <div id="implants" class="bg-white rounded-xl shadow-md" style="padding: 2.5rem; border: 1px solid var(--clr-border);">
+                <div style="width: 50px; height: 50px; background: var(--clr-teal-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                    <i class="fa-solid fa-screwdriver-wrench text-teal" style="font-size: 1.5rem;"></i>
+                </div>
+                <h3 class="heading-tertiary" style="margin-bottom: 1rem;">Dental Implants</h3>
+                <p style="color: var(--clr-text-main); margin-bottom: 1rem;">The permanent solution for missing teeth. Our high-quality implants look, feel, and function just like your natural teeth.</p>
+            </div>
+
+            <!-- Braces / Orthodontics -->
+            <div class="bg-white rounded-xl shadow-md" style="padding: 2.5rem; border: 1px solid var(--clr-border);">
+                <div style="width: 50px; height: 50px; background: var(--clr-teal-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                    <i class="fa-solid fa-face-smile text-teal" style="font-size: 1.5rem;"></i>
+                </div>
+                <h3 class="heading-tertiary" style="margin-bottom: 1rem;">Orthodontics (Braces)</h3>
+                <p style="color: var(--clr-text-main); margin-bottom: 1rem;">Correct misaligned teeth for a perfect smile and better function. We offer traditional metal braces and modern ceramic options.</p>
+            </div>
+            
+             <!-- Extractions -->
+             <div class="bg-white rounded-xl shadow-md" style="padding: 2.5rem; border: 1px solid var(--clr-border);">
+                <div style="width: 50px; height: 50px; background: var(--clr-teal-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                    <i class="fa-solid fa-syringe text-teal" style="font-size: 1.5rem;"></i>
+                </div>
+                <h3 class="heading-tertiary" style="margin-bottom: 1rem;">Surgical Extractions</h3>
+                <p style="color: var(--clr-text-main); margin-bottom: 1rem;">Safe removal of severely damaged or impacted teeth, including wisdom teeth, performed with precision and utmost care.</p>
+            </div>
+
+            <!-- Crowns & Bridges -->
+            <div class="bg-white rounded-xl shadow-md" style="padding: 2.5rem; border: 1px solid var(--clr-border);">
+                <div style="width: 50px; height: 50px; background: var(--clr-teal-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                    <i class="fa-solid fa-crown text-teal" style="font-size: 1.5rem;"></i>
+                </div>
+                <h3 class="heading-tertiary" style="margin-bottom: 1rem;">Crowns & Bridges</h3>
+                <p style="color: var(--clr-text-main); margin-bottom: 1rem;">Restore the shape, size, and strength of damaged or missing teeth with custom-fitted, natural-looking crowns and bridges.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 1rem;">
+                        <i class="fa-solid fa-tooth logo-icon" style="color: white;"></i>
+                        <span>Arsh Clinic</span>
+                    </a>
+                    <p style="margin-bottom: 1.5rem; color: var(--clr-text-light);">
+                        Advanced Dental and Cosmetic Care in Bilaspur led by Dr. Aradhna Das.
+                    </p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="dental.html">Dental Treatments</a>
+                        <a href="cosmetic.html">Laser & Skin Care</a>
+                        <a href="gallery.html">Transformation Gallery</a>
+                        <a href="about.html">Meet Dr. Aradhna Das</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Arsh Family Dental Care & Cosmetic Centre. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>
